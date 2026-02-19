@@ -35,7 +35,7 @@ android {
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-
+    implementation(libs.coroutines.android)
 
     implementation(project(":prismix-core"))
 }
