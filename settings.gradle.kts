@@ -26,3 +26,4 @@ rootProject.name = "prismix"
 include(":app")
 include(":prismix-core")
 include(":prismix-xml")
+include(":prismix-compose")
