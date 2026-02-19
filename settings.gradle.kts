@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 rootProject.name = "prismix"
 include(":app")
 include(":prismix-core")
+include(":prismix-xml")
