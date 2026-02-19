@@ -4,15 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.andihasan.prismix_compose"
-    compileSdk {
-        version = release(36)
-    }
+    namespace = "io.github.hasanelfalakiy.prismix.compose"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 23
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -32,13 +29,21 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+
+    buildFeatures {
+        compose = true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = libs.versions.compose.compiler.get() // sesuaikan
+    }
+
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(project(":prismix-core"))
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.compose.material3)
 }

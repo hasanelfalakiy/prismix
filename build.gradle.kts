@@ -4,3 +4,6 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.android.library) apply false
 }
+
+group = "io.github.hasanelfalakiy"
+version = "1.0.0"

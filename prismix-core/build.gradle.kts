@@ -4,10 +4,8 @@ plugins {
 }
 
 android {
-    namespace = "com.andihasan.prismix_core"
-    compileSdk {
-        version = release(36)
-    }
+    namespace = "io.github.hasanelfalakiy.prismix.core"
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 23
@@ -35,10 +33,5 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(libs.coroutines.core)
 }
