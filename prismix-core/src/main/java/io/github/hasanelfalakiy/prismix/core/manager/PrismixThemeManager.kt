@@ -1,6 +1,6 @@
 package io.github.hasanelfalakiy.prismix.core.manager
 
-import io.github.hasanelfalakiy.prismix.core.model.PrismixTheme
+import io.github.hasanelfalakiy.prismix.core.theme.PrismixTheme
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 

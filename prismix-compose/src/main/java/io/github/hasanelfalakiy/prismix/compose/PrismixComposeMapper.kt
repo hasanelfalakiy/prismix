@@ -4,36 +4,39 @@ import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.ui.graphics.Color
-import io.github.hasanelfalakiy.prismix.core.model.PrismixColorScheme
+import io.github.hasanelfalakiy.prismix.core.color.PrismixColorScheme
 
-internal fun PrismixColorScheme.toComposeColorScheme(
-    isDark: Boolean
-): ColorScheme {
+internal fun PrismixColorScheme.toMaterial3(): ColorScheme {
+    return lightColorScheme(
+        primary = Color(primary),
+        onPrimary = Color(onPrimary),
+        primaryContainer = Color(primaryContainer),
+        onPrimaryContainer = Color(onPrimaryContainer),
 
-    val primaryColor = Color(primary)
-    val onPrimaryColor = Color(onPrimary)
-    val backgroundColor = Color(background)
-    val onBackgroundColor = Color(onBackground)
-    val surfaceColor = Color(surface)
-    val onSurfaceColor = Color(onSurface)
+        secondary = Color(secondary),
+        onSecondary = Color(onSecondary),
+        secondaryContainer = Color(secondaryContainer),
+        onSecondaryContainer = Color(onSecondaryContainer),
 
-    return if (isDark) {
-        darkColorScheme(
-            primary = primaryColor,
-            onPrimary = onPrimaryColor,
-            background = backgroundColor,
-            onBackground = onBackgroundColor,
-            surface = surfaceColor,
-            onSurface = onSurfaceColor
-        )
-    } else {
-        lightColorScheme(
-            primary = primaryColor,
-            onPrimary = onPrimaryColor,
-            background = backgroundColor,
-            onBackground = onBackgroundColor,
-            surface = surfaceColor,
-            onSurface = onSurfaceColor
-        )
-    }
+        tertiary = Color(tertiary),
+        onTertiary = Color(onTertiary),
+        tertiaryContainer = Color(tertiaryContainer),
+        onTertiaryContainer = Color(onTertiaryContainer),
+
+        background = Color(background),
+        onBackground = Color(onBackground),
+
+        surface = Color(surface),
+        onSurface = Color(onSurface),
+        surfaceVariant = Color(surfaceVariant),
+        onSurfaceVariant = Color(onSurfaceVariant),
+
+        outline = Color(outline),
+        error = Color(error),
+        onError = Color(onError),
+
+        inverseSurface = Color(inverseSurface),
+        inverseOnSurface = Color(inverseOnSurface),
+        inversePrimary = Color(inversePrimary)
+    )
 }

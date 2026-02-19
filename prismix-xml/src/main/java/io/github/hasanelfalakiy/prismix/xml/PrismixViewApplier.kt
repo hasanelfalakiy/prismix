@@ -3,7 +3,7 @@ package io.github.hasanelfalakiy.prismix.xml
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import io.github.hasanelfalakiy.prismix.core.model.PrismixTheme
+import io.github.hasanelfalakiy.prismix.core.theme.PrismixTheme
 
 object PrismixViewApplier {
 
@@ -11,11 +11,11 @@ object PrismixViewApplier {
         when (view) {
 
             is TextView -> {
-                view.setTextColor(theme.colors.onBackground.toInt())
+                view.setTextColor(theme.colorScheme.onBackground.toInt())
             }
 
             else -> {
-                view.setBackgroundColor(theme.colors.background.toInt())
+                view.setBackgroundColor(theme.colorScheme.background.toInt())
             }
         }
 

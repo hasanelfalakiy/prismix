@@ -14,7 +14,7 @@ fun PrismixTheme(
         ?: error("PrismixThemeManager has no theme set")
 
     val colorScheme = remember(theme) {
-        theme.colors.toComposeColorScheme(theme.isDark)
+        theme.colorScheme.toMaterial3()
     }
 
     CompositionLocalProvider(
